@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project Trans</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <svg
+      width="0"
+      height="0"
+      xmlns="http://www.w3.org/2000/svg"
+      style="position: absolute; visibility: hidden"
+    >
+      <filter
+        id="primaryIconStroke"
+        filterUnits="objectBoundingBox"
+        primitiveUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feMorphology
+          operator="dilate"
+          radius="2 2"
+          in="SourceGraphic"
+          result="morphology"
+        ></feMorphology>
+        <feMorphology
+          operator="dilate"
+          radius="3.5 3.5"
+          in="SourceGraphic"
+          result="morphology1"
+        ></feMorphology>
+        <feFlood
+          flood-color="#ffffff"
+          flood-opacity="1"
+          result="flood"
+        ></feFlood>
+        <feFlood
+          flood-color="#E0E0E0"
+          flood-opacity="1"
+          result="flood1"
+        ></feFlood>
+        <feComposite
+          in="flood"
+          in2="morphology"
+          operator="in"
+          result="composite"
+        ></feComposite>
+        <feComposite
+          in="flood1"
+          in2="morphology1"
+          operator="in"
+          result="composite1"
+        ></feComposite>
+        <feMerge result="merge">
+          <feMergeNode in="composite1"></feMergeNode>
+          <feMergeNode in="composite"></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+      <filter
+        id="accentIconStroke"
+        filterUnits="objectBoundingBox"
+        primitiveUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feMorphology
+          operator="dilate"
+          radius="2 2"
+          in="SourceGraphic"
+          result="morphology"
+        ></feMorphology>
+        <feMorphology
+          operator="dilate"
+          radius="3.5 3.5"
+          in="SourceGraphic"
+          result="morphology1"
+        ></feMorphology>
+        <feFlood
+          flood-color="#ffffff"
+          flood-opacity="1"
+          result="flood"
+        ></feFlood>
+        <feFlood
+          flood-color="#95FCDB"
+          flood-opacity="1"
+          result="flood1"
+        ></feFlood>
+        <feComposite
+          in="flood"
+          in2="morphology"
+          operator="in"
+          result="composite"
+        ></feComposite>
+        <feComposite
+          in="flood1"
+          in2="morphology1"
+          operator="in"
+          result="composite1"
+        ></feComposite>
+        <feMerge result="merge">
+          <feMergeNode in="composite1"></feMergeNode>
+          <feMergeNode in="composite"></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+      <filter
+        id="chevronStroke"
+        filterUnits="objectBoundingBox"
+        primitiveUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feMorphology
+          operator="dilate"
+          radius="3 3"
+          in="SourceGraphic"
+          result="morphology"
+        ></feMorphology>
+        <feFlood
+          flood-color="#ffffff"
+          flood-opacity="1"
+          result="flood"
+        ></feFlood>
+        <feComposite
+          in="flood"
+          in2="morphology"
+          operator="in"
+          result="composite2"
+        ></feComposite>
+        <feMerge result="merge">
+          <feMergeNode in="composite2"></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+      <linearGradient id="primaryGradient" gradientTransform="rotate(90)">
+        <stop offset="0%" stop-color="#EB53B8" stop-opacity="1"></stop>
+        <stop offset="100%" stop-color="#EE79F8" stop-opacity="1"></stop>
+      </linearGradient>
+    </svg>
+    <div class="titleScreen">
+      <canvas class="particlesCanvas" id="particlesCanvas"></canvas>
+      <div class="buttonOverlay">
+        <a
+          href="https://github.com/project-trans"
+          target="_blank"
+          class="button iconButton shade githubButton"
+          data-tippy-lyrics=""
+        >
+          <img src="./assets/github.svg" />
+        </a>
+        <div class="homeCTAButtons">
+          <a
+            href="https://about.project-trans.org/"
+            class="button textButton shade homeCTAButton"
+          >
+            <span>About</span>
+          </a>
+          <a
+            href="https://2345.lgbt"
+            class="button textButton shade primary homeCTAButton"
+          >
+            <img src="./assets/logos/2345-lgbt.svg" alt="2345.LGBT" />
+          </a>
+        </div>
+      </div>
+      <div class="logoBox">
+        <img src="./assets/logos/en-banner.svg" alt="Project Trans" />
+      </div>
+    </div>
+    <script>
+      const PartileAssets = {
+        pattern1: "./assets/solid.svg",
+        pattern2: "./ssets/outline.svg",
+        pattern3: "./assets/blur.svg",
+      };
+    </script>
+    <script src="./assets/2d-canvas-image-particles.min.js"></script>
+    <script src="./assets/index.js"></script>
+  </body>
+</html>

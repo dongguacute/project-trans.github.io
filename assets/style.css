@@ -1,0 +1,139 @@
+.titleScreen {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("splash-background.svg");
+  background-color: #fff;
+  background-size: cover;
+  background-position: center center;
+  padding: 0.5em;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.buttonOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.githubButton {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+.buttonOverlay > * {
+  pointer-events: all;
+}
+
+.button {
+  background-color: #fff;
+  border: 5px solid #e1e1e1;
+  border-radius: 10px;
+  box-shadow: 0 0 0 3px #555573, 0 3px 0 3px #555573;
+  margin: 3px 3px 6px;
+  font-weight: 550;
+  font-family: Inter var, Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  padding: 0;
+  text-decoration: none;
+  color: #454367;
+  cursor: default;
+}
+
+.homeCTAButtons {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.button.iconButton {
+  width: 4rem;
+  height: 4rem;
+  font-size: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #5cc9bb;
+  box-sizing: border-box;
+}
+
+.button.iconButton > img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.button.textButton {
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #444463;
+}
+
+.button.shade {
+  background-image: url("halftoneButtonBg.svg");
+  background-position-x: center;
+  background-repeat: repeat-x;
+  background-position-y: -10px;
+  background-size: auto 40px, auto;
+}
+
+.button.primary.shade {
+  background-image: url("halftoneButtonBgWhite.svg"),
+    linear-gradient(to bottom, #7afbca, #75fbf7);
+  background-position-y: -10px, center;
+  background-size: auto 40px, 100% 100%;
+}
+.button.primary img {
+  display: block;
+  filter: url(#accentIconStroke);
+  transform-origin: center;
+  transform: translateY(-15px) scale(1.4);
+  height: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.homeCTAButton > span {
+  padding-right: 0.5rem;
+}
+.button.textButton > span {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  padding: 0.5rem 1.25rem;
+}
+
+.particlesCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.logoBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(300px, 50vw, 800px);
+  text-align: center;
+}
+
+.logoBox img {
+  width: 100%;
+  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 5px #fff)
+    drop-shadow(0 0 5px #fff);
+}
