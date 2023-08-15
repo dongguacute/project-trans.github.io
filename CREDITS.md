@@ -1,6 +1,6 @@
 Unless other specified, code licensed under the [GNU Affero General Public License version 3][agpl].
 
-Unless other specified, artwork resources licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](cc-by-nc-sa), by [Project SEKAI CTF][project-sekai-ctf].
+Unless other specified, artwork resources licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](cc-by-nc-sa), by [Project SEKAI CTF][sekai-ctf].
 
 The logos (under assets/logos) are copyrighted work of [Project Trans][project-trans] and may not be used in derivative works.
 
